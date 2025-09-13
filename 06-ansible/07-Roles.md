@@ -416,7 +416,7 @@ In Ansible roles, the `tasks` directory is a fundamental component where the mai
 
 Here's an example of how the directory structure might look for a role with a `tasks` directory:
 
-```
+```bash
 roles/
   my_role/
     tasks/
@@ -450,6 +450,8 @@ When a playbook includes a role, Ansible automatically looks for the `tasks/main
 The `tasks` directory is thus central to the functionality of an Ansible role, encapsulating the primary actions that the role is responsible for executing.
 
 
-#### checked here
+### Visualizing Ansible Playbooks and Roles with Graphs
+
+you can visualize your Ansible playbooks and roles using the following tool:
 
 https://github.com/haidaraM/ansible-playbook-grapher
