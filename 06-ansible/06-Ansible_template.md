@@ -130,47 +130,4 @@ You can use the following operators in if statements:
 * `is` (identity)
 * `is not` (non-identity)
 
-Here are some examples:
 
-```j2
-{% if my_variable > 10 %}
-  The variable is greater than 10
-{% endif %}
-
-{% if 'foo' in my_variable %}
-  The variable contains foo
-{% endif %}
-
-{% if my_variable is defined %}
-  The variable is defined
-{% endif %}
-```
-
-You can also use the `and` and `or` operators to combine conditions:
-
-```
-{% if my_variable > 10 and my_variable < 20 %}
-  The variable is between 10 and 20
-{% endif %}
-
-{% if my_variable == 'foo' or my_variable == 'bar' %}
-  The variable is foo or bar
-{% endif %}
-```
-
-In Ansible, you can also use the `when` clause to execute a task only if a certain condition is met:
-
-```
-- name: Execute task only if condition is met
-  debug:
-    msg: "Condition is met"
-  when: my_variable == 'foo'
-```
-
-This is equivalent to the following Jinja code:
-
-```
-{% if my_variable == 'foo' %}
-  {{ "Condition is met" }}
-{% endif %}
-```
