@@ -105,7 +105,7 @@ Here's an example:
 
 You can also use the `elif` and `else` statements:
 
-```j2
+{% raw %}
 {% if my_variable == 'foo' %}
   The variable is foo
 {% elif my_variable == 'bar' %}
@@ -113,7 +113,7 @@ You can also use the `elif` and `else` statements:
 {% else %}
   The variable is not foo or bar
 {% endif %}
-```
+{% endraw %}
 
 You can use the following operators in if statements:
 
