@@ -104,7 +104,7 @@ Here's an example:
 
 You can also use the `elif` and `else` statements:
 
-```jinja
+```bash
 {% if my_variable == 'foo' %}
   The variable is foo
 {% elif my_variable == 'bar' %}
