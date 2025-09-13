@@ -53,9 +53,9 @@ ifconfig can be used to  turn an interface up and down ,again  this will need ro
 * ifconfig _interface_ up:  used to activate the driver for the given interface
 * ifconfig _interface _down:   used to deactivate the driver for the given interface
 
-{% hint style="danger" %}
+**
 If you're still using ifconfig, you're living in the past! ifconfig command  is deprecated and replaced by ip command.
-{% endhint %}
+**
 
 ### ifup , ifdown
 
@@ -226,9 +226,9 @@ For making new hostname permanent it is another file which should be modified.
 
 All network devices, whether they are hosts, routers, or other types of network nodes such as network attached printers, need to make decisions about where to route TCP/IP data packets. The routing table provides the configuration information required to make those decisions. the **route **command is used to view and make changes to the kernel routing table. 
 
-{% hint style="danger" %}
+**
 route command make temporary setting, use config files instead!
-{% endhint %}
+**
 
  Running **route**  command  without any options displays the routing table entries:
 
@@ -364,7 +364,7 @@ that's all.
 
 .
 
-{% hint style="info" %}
+**
 ### Consistent network device naming
 
  Red Hat Enterprise Linux provides methods for consistent and predictable network device naming for network interfaces. These features change the name of network interfaces on a system in order to make locating and differentiating the interfaces easier.
@@ -374,7 +374,7 @@ Traditionally, network interfaces in Linux are enumerated as `eth[0123…]`, but
 In Red Hat Enterprise Linux, **udev** supports a number of different naming schemes. The default is to assign fixed names based on firmware, topology, and location information. This has the advantage that the names are fully automatic, fully predictable, that they stay fixed even if hardware is added or removed (no re-enumeration takes place), and that broken hardware can be replaced seamlessly. The disadvantage is that they are sometimes harder to read than the eth0 or wlan0 names traditionally used. For example: enp5s0.
 
 * for disabling that (how ever it is not recommanded Add both `net.ifnames=0` and `biosdevname=0` as kernel parameter values to the `GRUB_CMDLINE_LINUX` variable  )
-{% endhint %}
+**
 
 #### DNS
 

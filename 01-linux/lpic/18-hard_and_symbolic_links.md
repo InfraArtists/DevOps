@@ -146,7 +146,7 @@ Since hard links always point to an inode that represents a file, they are alway
 
 
 
-{% hint style="info" %}
+**
 **Identifying links via find command**
 
  To find which files are hard links to a particular inode, use the `find` command and the `-samefile` option with a file name or the `-inum` option with an inode number:
@@ -174,7 +174,7 @@ We can also use the `find` command to search for symbolic links using the `-type
 root@ubuntu16-1:~/sandbox# find . -type l 
 ./SoftLink
 ```
-{% endhint %}
+**
 
 ### Copying versus linking <a href="copying-versus-linking" id="copying-versus-linking"></a>
 
@@ -185,9 +185,9 @@ Depending on what we  want to accomplish, sometimes we  will use links and somet
 * You use links when we need an alias for a file (or directory), possibly to provide a more convenient or shorter path. 
 * when we  update a file, all the links to it see the update, which is not the case if you copy a file. 
 
-{% hint style="danger" %}
+**
 symbolic links can be broken but that subsequent write operations may create a new file. Use links with care.
-{% endhint %}
+**
 
 #### Links and system administration
 
@@ -246,7 +246,7 @@ lrwxrwxrwx   1 root root     17 Nov 26  2017 libnetpbm.so.10 -> libnetpbm.so.10.
 
 .
 
-{% hint style="danger" %}
+**
 **remove symbolic links**
 
   We can** **remove (delete) symbolic links  using the `rm`, `unlink`, and `find` commands. 
@@ -278,7 +278,7 @@ To find all broken symbolic links under a given directory, run the following com
 #### Conclusion
 
 To remove a symbolic link, use either the `rm` or `unlink` command followed by the name of the symlink as an argument. When removing a symbolic link that points to a directory do not append a trailing slash to the symlink name.
-{% endhint %}
+**
 
 .
 

@@ -76,7 +76,7 @@ root@ubuntu16-1:~# useradd -m -d /home/user3 -c "Dear user3" -s /bin/bash user3
 
 ### /etc/skel
 
-{% hint style="info" %}
+**
 #### The home directory skeleton
 
 When you create a new user and a new home directory is created, the directory is populated with several files and subdirectories that, by default, are copied from /etc/skel.
@@ -85,7 +85,7 @@ When you create a new user and a new home directory is created, the directory is
 root@ubuntu16-1:~# ls -a /etc/skel/
 .  ..  .bash_logout  .bashrc  examples.desktop  .profile
 ```
-{% endhint %}
+**
 
 ### usermod <a href="the-home-directory-skeleton" id="the-home-directory-skeleton"></a>
 
@@ -282,11 +282,11 @@ Passwords can be encrypted with one of several encryption algorithms. Older syst
 
 The last 6 fields provides password aging and account lockout features. You need to use the chage command to setup password aging.
 
-{% hint style="info" %}
+**
 **epoch time**
 
 Unix time is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970, minus leap seconds.
-{% endhint %}
+**
 
 ### chage
 

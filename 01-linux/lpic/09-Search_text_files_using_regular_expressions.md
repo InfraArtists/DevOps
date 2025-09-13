@@ -166,12 +166,12 @@ fgrep -A 2 -B 1 "search_string" file.txt
 * The **+** means preceding item will be matched **1 or more** times.
 * The **?** means preceding item will be matched, **0 or 1** time.
 
-{% hint style="info" %}
+**
 #### Globbing and Regex: So Similar, So Different
 
  Beginners sometimes tend to confuse **wildcards**(globbing) with **regular expressions** when using grep but they are not the same.\
  **Wildcards** are a feature provided by the shell to expand file names whereas** regular expressions** are a text filtering mechanism intended for use with utilities like grep, sed and  awk.
-{% endhint %}
+**
 
 | Special Character | Meaning in Globs                   | Meaning in Regex                                            |
 | ----------------- | ---------------------------------- | ----------------------------------------------------------- |
@@ -181,9 +181,9 @@ fgrep -A 2 -B 1 "search_string" file.txt
 
 In order to avoid any mistake while using  extended regular expressions, use `grep` with` -E` option, `-E`  treats pattern as an extended regular expression(ERE).
 
-{% hint style="info" %}
+**
 **double quotes " " : **Also we need to put our extended regex between  double quotes, other wise it might be interpreted by shell and gives us different results. 
-{% endhint %}
+**
 
 | regex                                           | match                              |
 | ----------------------------------------------- | ---------------------------------- |
@@ -193,4 +193,4 @@ In order to avoid any mistake while using  extended regular expressions, use `gr
 
 This is a point where egrep comes to play:
 
-{% hint style="success" %}
+**

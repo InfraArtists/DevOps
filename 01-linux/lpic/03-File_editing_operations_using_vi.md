@@ -43,7 +43,7 @@ Inorder to read, create or modify a file with vi, give the file name to it:
 vi filename
 ```
 
-{% hint style="info" %}
+**
 **if you just type vi(m) and hit enter, the vi(m) version will be displayed:**
 
 ```
@@ -61,7 +61,7 @@ vi filename
 ~                type  :help<Enter>  or  <F1>  for on-line help                 
 ~                type  :help version7<Enter>   for version info        
 ```
-{% endhint %}
+**
 
 Okey lets start learning vi(m):
 
@@ -228,7 +228,7 @@ Press ESC to return back to the normal command mode!
 | :e! | it will discard local changes and reload.          |
 | :! | run a shell command, shows you the output and prompts you before returning to your current buffer.         |
 
-{% hint style="success" %}
+**
 ### VIM Tip : running external commands in a shell
 
 It usuaslly happens that we need to run a command in shell to see the result of file which we are edditing. It could be happened in two ways:
@@ -238,7 +238,7 @@ It usuaslly happens that we need to run a command in shell to see the result of 
 2.So, instead, you could use vim’s built-in “run a shell command”:
 
 > :!cmd Run a shell command, shows you the output and prompts you before returning to your current buffer.
-{% endhint %}
+**
 
 ### help
 

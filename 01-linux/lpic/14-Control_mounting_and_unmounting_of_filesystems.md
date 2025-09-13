@@ -42,9 +42,9 @@ root@ubuntu16-1:/mnt/mydisk# cat file1.txt
 
 ```
 
-{% hint style="info" %}
+**
 When you mount a filesystem over an existing directory, the files on the filesystem you are mounting become the files and subdirectories of the mount point. If the mount point directory already contained files or subdirectories, they are not lost, but are no longer visible until the mounted filesystem is unmounted, at which point they become visible again. It is a good idea to avoid this problem by using only empty directories as mount points.
-{% endhint %}
+**
 
 mount command without any arguments  displays all the mounts on the system:
 
@@ -170,7 +170,7 @@ UUID=b4801c8b-ca75-4548-8697-182d1b6d895c none            swap    sw            
 *  **type : **Specifies the type of filesystem. it can be (**ext2,3,4, reiserfs,swap, vfat and ntfs,ISO9660,auto**)
 * **option** : Specifies the mount options. Specify defaults if you want default mount options.
 
-{% hint style="info" %}
+**
 * sync/async - All I/O to the file system should be done (a)synchronously.
 * auto - The filesystem can be mounted automatically (at bootup, or when mount is passed the -a option). This is really unnecessary as this is the default action of mount -a anyway.
 * noauto - The filesystem will NOT be automatically mounted at startup, or when mount passed -a. You must explicitly mount the filesystem.
@@ -183,7 +183,7 @@ UUID=b4801c8b-ca75-4548-8697-182d1b6d895c none            swap    sw            
 * nouser - Only permit root to mount the filesystem. This is also a default setting.
 * defaults - Use default settings. Equivalent to rw, suid, dev, exec, auto, nouser, async.
 * \_netdev - this is a network device, mount it after bringing up the network. Only valid with fstype nfs.
-{% endhint %}
+**
 
 > note1: User-mounted filesystems default to noexec unless exec is specified afteruser.
 >

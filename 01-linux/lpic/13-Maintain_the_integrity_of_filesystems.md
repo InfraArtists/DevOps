@@ -30,9 +30,9 @@ e2fsck 1.42.13 (17-May-2015)
 e2fsck: Cannot continue, aborting.
 ```
 
-{% hint style="danger" %}
+**
 In order to use fsck the partition should be unmounted, otherwise it might cause damages!
-{% endhint %}
+**
 
 Lets simply check file system on an unmounted ext3 partition (sdb1) and try to fix errors :
 
@@ -86,11 +86,11 @@ Pass 5: Checking group summary information
 
 ```
 
-{% hint style="success" %}
+**
 **What are inodes?**
 
 As we said Linux  treating everything as a file (even the hardware devices). The keyboard, mouse, printers, monitor, hard disk, processes, even the directories are treated as files in Linux. The regular files contain data such as text (text files), music, videos (multimedia files) etc. Set aside the regular data, there are some other data about these files, such as their size, ownership, permissions, timestamp etc. This meta-data about a file is managed with a data structure known as an inode (index node).
-{% endhint %}
+**
 
 > We can also check file systems using their UUID.(use blkid command ):
 >
@@ -121,7 +121,7 @@ There are several more advanced tools that we can use to examine or repair a fil
 * **dumpe2fs: **shows all super blocks info
 * **debugfs: **interactive file system editor
 
-{% hint style="info" %}
+**
 **Super Blocks**
 
  You may be wondering how all these checking and repairing tools know where to start. Linux and UNIX filesystems usually have a _superblock_, which describes the filesystem _metadata_, or data describing the filesystem itself. This is usually stored at a known location, frequently at or near the beginning of the filesystem, and replicated at other well-known locations. You can use the `-n` option of `mke2fs` to display the superblock locations for an existing filesystem.
@@ -138,15 +138,15 @@ Superblock backups stored on blocks:
 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
 	4096000
 ```
-{% endhint %}
+**
 
 ### tune2fs
 
  The ext family of file systems also has a utility called `tune2fs`, which can be used to inspect information about the block count as well as information about whether the filesystem is journaled (ext3 or ext4) or not (ext2). 
 
-{% hint style="success" %}
+**
 The tune2fs command allows you to set assorted filesystem parameters on a mounted ext2 or ext3 filesystem.
-{% endhint %}
+**
 
 `-l` shows contents of the filesystem superblock, including the current values of the parameters:
 
@@ -210,9 +210,9 @@ tune2fs 1.42.13 (17-May-2015)
 
 dumpe2fs command is used to print the super block and blocks group information for the filesystem present on device.
 
-{% hint style="danger" %}
+**
 printed information may be old or inconsistent when it is used with a mounted filesystem. Don’t forget to unmount your partition before using this command.
-{% endhint %}
+**
 
 ```
 root@ubuntu16-1:~# dumpe2fs  /dev/sdb1 | grep superblock
@@ -235,9 +235,9 @@ dumpe2fs 1.42.13 (17-May-2015)
 
 Is an interactive filesystem debugger. Use it to examine or change the state of an ext2 or ext3 filesystem.  It opens the filesystem in read-only mode unless we tell it not to (with `-w` option).
 
-{% hint style="danger" %}
+**
  if  the filesystem is mounted,  is alright for inspecting, but **Do not** attempt repair on a mounted filesystem.
-{% endhint %}
+**
 
 ```
 root@ubuntu16-1:~# debugfs /dev/sda1
@@ -272,9 +272,9 @@ debugfs:  q
 
 xfs file system has it's own family commands. xfs_info is the same as tune2fs but for xfs.
 
-{% hint style="success" %}
+**
 xfs_info should be used on a mounted file system.
-{% endhint %}
+**
 
 > xfsprogs package must be installed 
 
@@ -305,9 +305,9 @@ xfs_repair: /dev/sdb1 contains a mounted and writable filesystem
 fatal error -- couldn't initialize XFS library
 ```
 
-{% hint style="danger" %}
+**
 obviously xfs_repair does not work on mounted file system.
-{% endhint %}
+**
 
 ```
 root@ubuntu16-1:~# xfs_repair  /dev/sdb1

@@ -41,7 +41,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 > It can show numeric ID’s (UID or group ID) of the current user or any other user in the server.
 
-{% hint style="info" %}
+**
 users and groups information are stored in /etc/passwd and /etc/group along other information.
 
 ```
@@ -50,7 +50,7 @@ user1:x:1001:1001::/home/user1:
 root@ubuntu16-1:~# cat /etc/group | grep user1
 user1:x:1001:
 ```
-{% endhint %}
+**
 
 #### File ownership and permissions
 
@@ -520,7 +520,7 @@ As with many of the commands covered in this tutorial, `chgrp` has a `-R` option
 
 .
 
-{% hint style="success" %}
+**
 **Primary and secondary groups**
 
 There are actually two types of groups — **primary** and **secondary**.
@@ -530,7 +530,7 @@ The **primary group** is the one that’s recorded in the **/etc/passwd** file, 
  **Secondary groups** are those that users might be added to once they already have accounts. Secondary group memberships show up in the /etc/group file.
 
 A user can change his/her **primary group** (**default group**) with `newgrp `command, and after that all file/directories the user creates will have that group.
-{% endhint %}
+**
 
 
 

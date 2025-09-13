@@ -582,9 +582,9 @@ zip-3.0-11.el7.x86_64.rpm  zip.cpio
 
 we used the`-t` option to direct cpio to produce a "table of contents" of the archive created by rpm2cpio. This can make it much easier to get the right filename and path when you want to extract a file. An easier way  to exctract would be `rpm2cpio package.rpm | cpio id .`
 
-{% hint style="danger" %}
+**
 Warning! Becarefull when removing extracted package (usr vs /usr)
-{% endhint %}
+**
 
 ## YUM
 
@@ -700,9 +700,9 @@ Repository configuration files tell yum information about the actual repository 
 * **Gpgcheck **- Enable/disable GPG signature checking (example: gpgcheck=1)
 * **Gpgkey **- URL to the GPG key (example: gpgkey=[http://mirror.cisp.com/CentOS/6/os/i386/RPM-GPG-KEY-CentOS-6\\](http://mirror.cisp.com/CentOS/6/os/i386/RPM-GPG-KEY-CentOS-6\)/)
 
-{% hint style="info" %}
+**
 GPG is a digital signature check , which is used to verify the package is modified in between your downloads or after making the package, It help to verify the that you are installing the correct package with out any modification from 3 party or a hacker.
-{% endhint %}
+**
 
 YUM can use numerous third party repositories to install packages automatically by resolving their dependencies issues.
 

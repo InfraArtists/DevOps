@@ -488,14 +488,14 @@ root      61100  55644  0 02:58 pts/17   00:00:00 grep --color=auto sleep
 
   use `kill -l` to see all signals you can send using kill.
 
-{% hint style="danger" %}
+**
 There are two commands used to kill a process:
 
 * kill – Kill a process by ID
 * killall,pkill – Kill a process by name
 
 killing a proccess by name could be realy dangerous, Before sending signal,  verify which process is matching the criteria using “pgrep -l”.
-{% endhint %}
+**
 
 ### killall
 
@@ -662,7 +662,7 @@ uptime from procps-ng 3.3.10
 
 .
 
-{% hint style="info" %}
+**
 Processes deep dive ( Beyond the scope of LPIC1)
 
  **Types of Processes**
@@ -696,7 +696,7 @@ Some extra modifiers:
 * `s` is a session leader
 * `l` is multi-threaded (using CLONE_THREAD, like NPTL pthreads do)
 * `+` is in the foreground process group
-{% endhint %}
+**
 
 install ```strees-ng```
 

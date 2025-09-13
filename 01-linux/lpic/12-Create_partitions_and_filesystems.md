@@ -294,11 +294,11 @@ With a journal, your computer would note that it was going to write a certain fi
 
 Journaling does slow disk write performance down a tiny bit, but it’s well-worth it on a desktop or laptop.
 
-{% hint style="success" %}
+**
 Which File System is perfect for you?
 
  Generally, a journaling filesystem is preferred over a non-journaling one when you have a choice. You may also want to consider whether your chosen filesystem supports _Security Enhanced Linux_ (or SELinux). 
-{% endhint %}
+**
 
 Following is a brief summary of the types you need to know about for the LPI exam**:**
 
@@ -319,14 +319,14 @@ We must create a file system before you can use any data storage device connecte
 
 Linux uses the `mkfs` command to create filesystems and `mkswap`command to make swap space.
 
-{% hint style="danger" %}
+**
 Before you start modifying partitions, there are some important things to remember. You risk losing your existing data if you do not follow these guidelines: 
 
 1. Back up important data before you start 
 2. Do not change partitions that are in use 
 3. Know your tool
 4.  Stop if you do make a mistake
-{% endhint %}
+**
 
  Linux uses the `mkfs` command to create filesystems and `mkswap`command to make swap space
 
@@ -378,9 +378,9 @@ root@ubuntu16-1:~#
 
 If we want  to assign a label to the partition during format progress we should use -L labelname with that :  `mkfs -t ext3 -L MyData /dev/sdb1`
 
-{% hint style="info" %}
+**
 For mounting Formatted partition we can either use Partition label or  **UUID**.  **UUID** _is a unique identifier used in partitions to uniquely identify partitions_. to get the UUID of recent created  partition try : `blkid /dev/sdb1`
-{% endhint %}
+**
 
 | Partition | Format Type | Sample Command                    | Notes                                                             |
 | --------- | ----------- | --------------------------------- | ----------------------------------------------------------------- |

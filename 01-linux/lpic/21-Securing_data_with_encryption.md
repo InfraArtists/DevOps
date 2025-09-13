@@ -27,19 +27,19 @@ This means that you do not have to worry about passing public keys over the Inte
 
 > A problem with asymmetric encryption, however, is that it is slower than symmetric encryption. It requires far more processing power to both encrypt and decrypt the content of the message.
 
-{% hint style="info" %}
+**
 **encryption vs signing**
 
 When encrypting, you use **their public key** to write a message and they use **their private key** to read it.
 
 When signing, you use **your private key** to write message's signature, and they use **your public key** to check if it's really yours.
-{% endhint %}
+**
 
-{% hint style="success" %}
+**
 #### Whats is a key server?
 
 Key server (cryptographic), a server on which public keys are stored for others to use
-{% endhint %}
+**
 
 With that introduction lets talk about SSH.
 
@@ -70,9 +70,9 @@ OpenSSH is a free, open source implementation of the SSH (Secure Shell) protocol
 
 All communications and user credentials using OpenSSH are encrypted, they are also protected from man in the middle attacks. If a third party tries to intercept our connection, OpenSSH detects it and informs us about that.
 
-{% hint style="success" %}
+**
 We use Ubuntu16-1 as ssh server and Ubuntu16-2 as client.
-{% endhint %}
+**
 
 #### /etc/ssh
 
@@ -125,9 +125,9 @@ Last login: Fri Mar 27 15:51:55 2020 from 192.168.52.133
 user1@ubuntu16-1:~$ 
 ```
 
-{% hint style="info" %}
+**
 **What is fingerprint ? **a public key fingerprint is a short sequence of bytes used to identify a longer public key. Fingerprints are created by applying a cryptographic hash function to a public key. Since fingerprints are shorter than the keys they refer to, they can be used to simplify certain key management tasks.
-{% endhint %}
+**
 
 now lets compare the keys in server and client:
 

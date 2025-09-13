@@ -123,7 +123,7 @@ Sat Oct 12 02:53:00 PDT 2019
 Sat Oct 12 02:53:23 PDT 2019
 ```
 
-{% hint style="info" %}
+**
  **To clobber or to noclobber?**
 
 We said that output redirection using n> usually overwrites existing files. You can control this with the `noclobber` option of the `set` builtin.  use set -C for enabling noclobber:
@@ -149,7 +149,7 @@ user1@ubuntu16-1:~$ ls >| list1
 ```
 
 use `set +C` for turning globbing off.
-{% endhint %}
+**
 
 **redirect both standard output and standard error**
 
@@ -177,14 +177,14 @@ root@ubuntu16-1:~/test-space/myfiles# cat result
 ls: cannot access 'blah3': No such file or directory
 ```
 
-{% hint style="info" %}
+**
  The order in which outputs are redirected is important. For example,\
 `command 2>&1 >output.txt`\
  is not the same as\
 `command >output.txt 2>&1`
 
 In the first case, stderr is redirected to the current location of stdout and then stdout is redirected to output.txt, but this second redirection affects only stdout, not stderr. In the second case, stderr is redirected to the current location of stdout and that is output.txt.
-{% endhint %}
+**
 
 ** redirecting to /dev/null**
 

@@ -260,7 +260,7 @@ LOGNAME=root
 ```
 
 >  just like/etc/crontab , /etc/anacrontab is updated by direct editing. 
-{% hint style="info" %}
+**
 #### Anacrontab Format
 
 ```
@@ -271,7 +271,7 @@ period   delay   job-identifier   command
 *  **delay in minutes**: number of minutes anacron should wait before executing the job after reboot.
 *  **job-identifier :**It is the name for the job’s timestamp file. It should be unique for each job. This will be available as a file under the /var/spool/anacron directory.
 *  **command**: specifies the command to execute. 
-{% endhint %}
+**
 
 ### /var/spool/anacron
 
@@ -368,9 +368,9 @@ user1@ubuntu16-1:~$ atq
 
   atq command only shows the list of jobs but if you want to check what script/commands are scheduled with that task use `at -c JobNum` command and see the last line.
 
-{% hint style="info" %}
+**
 both cron and are system services.
-{% endhint %}
+**
 
 ## Configure user access to job scheduling
 
@@ -402,7 +402,7 @@ The corresponding /etc/at.allow and /etc/at.deny files have similar effects for 
 
 .
 
-{% hint style="info" %}
+**
 ### Crontab Variables <a href="crontab-variables" id="crontab-variables"></a>
 
 The cron daemon automatically sets several environment variables.
@@ -411,7 +411,7 @@ The cron daemon automatically sets several environment variables.
 * The default shell is set to `/bin/sh`. You can set a different shell by changing the `SHELL` variable.
 * Cron invokes the command from the user’s home directory. The `HOME` variable can be overridden by settings in the crontab.
 * The email notification is sent to the owner of the crontab. To overwrite the default behavior, you can use the `MAILTO` environment variable with a list (comma separated) of all the email addresses you want to receive the email notifications. If `MAILTO` is defined but empty (`MAILTO=""`), no mail is sent.
-{% endhint %}
+**
 
 .
 
