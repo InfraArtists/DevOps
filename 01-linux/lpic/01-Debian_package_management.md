@@ -98,9 +98,9 @@ To view a specific package installed or not use the option “-l” along with p
 
 dpkg -i | --install ,install a local .deb file :
 
-{% hint style="success" %}
-.deb is extension of the software package format for the Linux distribution Debian.
-{% endhint %}
+
+**.deb is extension of the software package format for the Linux distribution Debian.**
+
 
 ```
 root@ubuntu16-1:~# dpkg -i zip_3.0-11_amd64.deb 
