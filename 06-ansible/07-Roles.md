@@ -283,7 +283,7 @@ user_role: {{ user.role }}
 
 - **Variable Substitution**: `{{ server_name_variable }}` is a placeholder for a variable that Ansible will replace with its actual value when the template is processed.
 
-- **Conditional Statement**: The `{% if %}`...`{% else %}`...`{% endif %}` blocks are used to conditionally include parts of the file based on the value of `enable_feature`.
+- **Conditional Statement**: The `if`...`else` blocks are used to conditionally include parts of the file based on the value of `enable_feature`.
 
 - **Loops**: The `{% for item in item_list %}` loop iterates over a list of items, allowing you to create repeated sections of the file for each item in the list.
 
