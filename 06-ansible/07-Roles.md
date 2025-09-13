@@ -285,7 +285,7 @@ user_role: {{ user.role }}
 
 - **Conditional Statement**: The `if`...`else` blocks are used to conditionally include parts of the file based on the value of `enable_feature`.
 
-- **Loops**: The `{% for item in item_list %}` loop iterates over a list of items, allowing you to create repeated sections of the file for each item in the list.
+- **Loops**: The `for` loop iterates over a list of items, allowing you to create repeated sections of the file for each item in the list.
 
 - **Default Filter**: The `{{ database_host_variable | default('localhost') }}` uses the `default` Jinja2 filter to provide a default value if `database_host_variable` is not defined.
 
@@ -449,9 +449,9 @@ When a playbook includes a role, Ansible automatically looks for the `tasks/main
 
 The `tasks` directory is thus central to the functionality of an Ansible role, encapsulating the primary actions that the role is responsible for executing.
 
-
 ### Visualizing Ansible Playbooks and Roles with Graphs
 
 you can visualize your Ansible playbooks and roles using the following tool:
 
 https://github.com/haidaraM/ansible-playbook-grapher
+
