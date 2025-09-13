@@ -80,7 +80,8 @@ Imagine you want to create a hosts file that maps hostnames to IP addresses for 
         dest: "/etc/hosts"
 
 ```
-```
+
+```bash
 ansible-playbook file4.yaml  -i ansible/inventory/hosts.ini -b
 ```
 
@@ -88,7 +89,7 @@ This setup dynamically generates `/etc/hosts` with IP addresses and hostnames sp
 
 In Jinja, the templating engine used by Ansible, you can write if statements using the following syntax:
 
-```
+```j2
 {% if condition %}
   # code to execute if condition is true
 {% endif %}
@@ -96,7 +97,7 @@ In Jinja, the templating engine used by Ansible, you can write if statements usi
 
 Here's an example:
 
-```
+```j2
 {% if my_variable == 'foo' %}
   The variable is foo
 {% endif %}
@@ -104,7 +105,7 @@ Here's an example:
 
 You can also use the `elif` and `else` statements:
 
-```bash
+```j2
 {% if my_variable == 'foo' %}
   The variable is foo
 {% elif my_variable == 'bar' %}
