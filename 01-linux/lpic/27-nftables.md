@@ -262,4 +262,36 @@ root@gw:~# nft replace rule inet filter input handle 3 tcp dport { 80, 443 } com
 root@gw:~# nft -ay list ruleset
 ```
 
+### Immiutable list
+
+For create changable list in nftalble
+
+```bash
+nft -f /etc/nftables.conf
+nft add set inet filter allow_ext_customer { type ipv4_addr \; }
+nft list sets
+```
+
+Now we should add our element to the sets
+
+```bash
+nft add element inet filter allow_ext_customer { 1.2.3.4, 10.0.0.100 }
+nft list sets
+nft add rule inet filter input ip saddr @allow_ext_customer accept comment \"Permit ext customers\"
+nft -ay list ruleset
+
+nft add rule inet filter input ip saddr @allow_ext_customer meta l4proto { udp, tcp } accept comment \"Permit ext customers\"
+```
+
+### Let's work with tcp/udp headers :)
+
+![udp-header](../../.gitbook/assets/udp-header.png)
+![tcp-header](../../.gitbook/assets/tcp-header.png)
+
+#### RAW PAYLOAD EXPRESSION
+Reading the packet header and then match if the port is 53 udp then accept it.
+
+```bash
+nft add rule inet filter input ip saddr @allow_ext_customer meta l4proto { udp, tcp } @th,16,16 53 accept comment \"Permit ext customers\"
+```
 
